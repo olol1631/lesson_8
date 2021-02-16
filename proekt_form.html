@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form</title>
+	<style>
+		body {
+			padding: 10px;
+		}
+
+		div {
+			margin-bottom: 5px;
+		}
+
+		.label-float {
+			float: left;
+		}
+
+		.form {
+			margin-left: 180px;
+		}
+
+		input[name="name"],
+		textarea {
+			width: 100%;
+		}
+
+		@media (max-width:560px) {
+			.label-float {
+				float: none;
+			}
+
+			.form {
+				margin-left: 0;
+			}
+			select{
+				width: 100%;
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+	<form method="GET" action="http://fe.it-academy.by/TestForm.php">
+		<p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+		<label class="label-float" for="text">Название статьи:</label>
+		<div class="form">
+			<input id="text" type="text" name="name">
+		</div>
+		<label class="label-float" for="rubr">Рубрика:</label>
+		<div class="form">
+			<select id="rubr" name="rubr">
+				<option value="1">компьютерная техника</option>
+				<option value="2">графика и дизайн</option>
+				<option value="3" selected>программирование</option>
+			</select>
+		</div>
+		<label class="label-float" for="">Публикация:</label>
+		<div class="form">
+			<label><input type="radio" name="publ">на сайте</label>
+			<label><input type="radio" name="publ">в журнале</label>
+			<label><input type="radio" name="publ">на сайте и в журнале</label>
+		</div>
+		<div>
+			<label>Разрешить комментарии:
+				<input type="checkbox" name="check" checked>
+			</label>
+		</div>
+		<div>
+			<label>Текст статьи:<br>
+				<textarea name="text"></textarea>
+			</label>
+		</div>
+		<input type="submit" value="Опубликовать">
+	</form>
+
+</body>
+
+</html>
