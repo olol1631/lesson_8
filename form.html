@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form</title>
+</head>
+<body>
+	<h1>Заполните форму</h1>
+	<form action="http://fe.it-academy.by/TestForm.php">
+		<fieldset>
+			<legend>Личные данные</legend>
+			<input type="text" name="lastname" maxlength="25" autofocus placeholder="Фамилия"> <br>
+			<input type="text" name="firstname" maxlength="20" placeholder="Имя"> <br>
+			<fieldset>
+				<legend>Паспортные данные</legend>
+				<input type="text" name="seria" maxlength="2" placeholder="AA"> 
+				<input type="number" name="number" maxlength="7" placeholder="1234567"> <br>
+			</fieldset>
+			<fieldset>
+				<legend>Дата рождения</legend>
+				<input type="number" name="year" maxlength="4" placeholder="2000"> <br>
+				<select name="month">
+					<option value="1">январь</option>
+					<option value="1">январь</option>
+					<option value="1">январь</option>
+					<option value="1">январь</option>
+					<option value="1">январь</option>
+				</select> <br>
+				<input type="number" name="day" placeholder="01">
+			</fieldset>
+			<select name="country" >
+				<option value="1">РБ</option>
+				<option value="2">РП</option>
+				<option value="3">У</option>
+			</select>
+			<p>Адрес</p>
+			<textarea name="address""></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Интересы</legend>
+			<fieldset>
+				<legend>Хобби</legend>
+				<label>
+					<input type="checkbox" name="hobby[]" value="fishing"> Рыбалка<br>
+				</label>
+				<label>
+					<input type="checkbox" name="hobby[]" value="diving"> Дайвинг<br>
+				</label>
+				<label>
+					<input type="checkbox" name="hobby[]" value="drawing" checked> Рисование<br>
+				</label>
+				<label>
+					<input type="checkbox" name="hobby[]" value="dance"> Танцы<br>
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Домашние животные</legend>
+				<select name="animal[]" multiple size="8">
+					<optgroup label="bird">
+						<option value="1">Попугай</option>
+						<option value="2">Попугай</option>
+						<option value="3">Попугай</option>
+					</optgroup>
+					<optgroup label="fish">
+						<option value="4">Окунь</option>
+						<option value="5">Окунь</option>
+						<option value="6">Окунь</option>
+					</optgroup>
+
+				</select>
+			</fieldset>
+		</fieldset>
+		<fieldset>
+			<legend>Данные для входа и восстановления пароля</legend>
+			<input type="text" name="login" maxlength="8" placeholder="Логин"> <br>
+			<input type="password" name="pass" maxlength="20" placeholder="Пароль">
+		</fieldset>
+		<fieldset>
+			<legend>Кнопки управления</legend>
+			<input type="number" name="number"><br>
+			<input type="range" name="range">
+
+			<input type="submit" > <br>
+			<input type="reset"><br>
+			<button>
+				<img src="" alt="btn">
+			</button>
+		</fieldset>
+	</form>
+	
+</body>
+</html>
